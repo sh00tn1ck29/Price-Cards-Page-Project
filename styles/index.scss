@@ -111,6 +111,7 @@ body {
       font-weight: $bold-weight;
       text-align: center;
       margin: 0;
+      line-height: 43px;
 
       @include big-tablet {
         font-size: 50px;
@@ -130,6 +131,7 @@ body {
       font-weight: $light-weight;
       text-align: center;
       margin-bottom: 31px;
+      line-height: 24px;
 
       @include big-tablet {
         font-size: 30px;
