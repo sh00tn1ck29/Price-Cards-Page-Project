@@ -12,6 +12,7 @@ body {
   width: 1176px;
   margin: 72px auto 72px auto;
   display: flex;
+  column-gap: 18px;
 }
 @media screen and (max-width: 1200px) {
   .prices {
@@ -237,9 +238,6 @@ body {
     height: 20px;
   }
 }
-.card--business {
-  margin: 0 18px 0 17px;
-}
 .card--business .card__feature::before {
   background-image: url("https://bionic-university.s3.eu-central-1.amazonaws.com/projects/price-cards/checkmark-blue.png");
 }
@@ -295,3 +293,4 @@ body {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
