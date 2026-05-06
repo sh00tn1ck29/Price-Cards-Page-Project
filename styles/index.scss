@@ -1,6 +1,11 @@
 @import 'variables.scss';
 @import 'breakpoints.scss';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   max-width: 1440px;
   font-family: 'Montserrat', sans-serif;
@@ -39,8 +44,6 @@ body {
   @include big-tablet {
     width: 100%;
   }
-  @include mobile {
-  }
 
   &__ribbon {
     display: flex;
@@ -61,7 +64,6 @@ body {
       height: 50px;
       font-size: 20px;
     }
-
     @include small-tablet {
       width: 34vw;
       height: 40px;
@@ -82,6 +84,7 @@ body {
       height: auto;
     }
   }
+
   &__title {
     font-size: 35px;
     font-weight: $bold-weight;
@@ -99,6 +102,7 @@ body {
       font-size: clamp(5.62vw, 5.62vw, 27px);
     }
   }
+
   &__subtitle {
     margin: 0px 0px 31px 0px;
     font-weight: $light-weight;
@@ -132,11 +136,11 @@ body {
   &__price {
     font-size: 55px;
     font-weight: $bold-weight;
-
     @include mobile {
       font-size: clamp(8.3vw, 8.3vw, 40px);
     }
   }
+
   &__description {
     width: 320px;
     max-height: 36px;
@@ -149,7 +153,6 @@ body {
       font-size: 20px;
       width: 80%;
     }
-
     @include mobile {
       font-size: clamp(3.75vw, 3.75vw, 18px);
       width: 90%;
@@ -171,6 +174,7 @@ body {
       grid-template-columns: 1fr 1fr;
     }
   }
+
   &__feature {
     height: 50px;
     display: flex;
@@ -182,11 +186,11 @@ body {
       background-color: $card-darkbg-color;
     }
     @include big-tablet {
-      font-size: 20px;
+      font-size: 25px;
     }
     @include small-tablet {
       font-size: 15px;
-      width: 33vw;
+      width: 40vw;
       padding-left: 7vw;
 
       &:nth-child(odd) {
@@ -197,10 +201,9 @@ body {
       &:nth-child(6) {
         background-color: $card-darkbg-color;
       }
-
-      @include mobile {
-        font-size: clamp(3.125vw, 3.125vw, 15px);
-      }
+    }
+    @include mobile {
+      font-size: clamp(3.125vw, 3.125vw, 15px);
     }
 
     &::before {
@@ -216,27 +219,78 @@ body {
         width: 20px;
         height: 20px;
       }
-    }
-  }
-  &--business {
-    .card__feature::before {
-      background-image: url('https://bionic-university.s3.eu-central-1.amazonaws.com/projects/price-cards/checkmark-blue.png');
-    }
-    .card__price-block {
-      background-color: $business-price-bgcl;
-    }
-  }
-  &--webshop {
-    .card__feature::before {
-      background-image: url('https://bionic-university.s3.eu-central-1.amazonaws.com/projects/price-cards/checkmark-orange.png');
-    }
-    .card__price-block {
-      background-color: $webshop-price-bgcl;
+
+      @include small-tablet {
+        width: 15px;
+        height: 15px;
+        background-size: 15px;
+      }
     }
   }
 }
 
-.button {
+.price-card_title {
+  font-size: 35px;
+  font-weight: $bold-weight;
+  line-height: normal;
+  margin: 32px 0px 0 0px;
+  text-align: center;
+
+  @include big-tablet {
+    font-size: 50px;
+  }
+  @include small-tablet {
+    font-size: 35px;
+  }
+  @include mobile {
+    margin: 16px 0px 0 0px;
+    font-size: clamp(5.62vw, 5.62vw, 27px);
+  }
+}
+
+.price-card_price {
+  font-size: 55px;
+  font-weight: $bold-weight;
+  @include mobile {
+    font-size: clamp(8.3vw, 8.3vw, 40px);
+  }
+}
+
+.price-card_description {
+  width: 320px;
+  max-height: 36px;
+  line-height: 18px;
+  text-align: center;
+  margin-block: 40px;
+  margin-inline: auto;
+
+  @include big-tablet {
+    font-size: 20px;
+    width: 80%;
+  }
+  @include mobile {
+    font-size: clamp(3.75vw, 3.75vw, 18px);
+    width: 90%;
+    margin-block: clamp(4.16vw, 4.16vw, 20px);
+  }
+}
+
+.price-card_options-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @include small-tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.price-card_order-btn {
   width: 156px;
   height: 40px;
   font-weight: $regular-weight;
@@ -261,14 +315,35 @@ body {
     height: clamp(8.3vw, 8.3vw, 40px);
     font-size: clamp(3.125vw, 3.125vw, 15px);
   }
+}
 
-  &--basic {
-    background-color: $basic-price-bgcl;
+.card--business {
+  .card__feature::before {
+    background-image: url('https://bionic-university.s3.eu-central-1.amazonaws.com/projects/price-cards/checkmark-blue.png');
   }
-  &--business {
+  .card__price-block {
     background-color: $business-price-bgcl;
   }
-  &--webshop {
+}
+
+.card--webshop {
+  .card__feature::before {
+    background-image: url('https://bionic-university.s3.eu-central-1.amazonaws.com/projects/price-cards/checkmark-orange.png');
+  }
+  .card__price-block {
     background-color: $webshop-price-bgcl;
   }
+}
+
+
+.button--basic {
+  background-color: $basic-price-bgcl;
+}
+
+.button--business {
+  background-color: $business-price-bgcl;
+}
+
+.button--webshop {
+  background-color: $webshop-price-bgcl;
 }
