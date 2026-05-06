@@ -46,8 +46,11 @@ body {
   overflow: hidden;
 
   @include big-tablet {
-    width: 100%;
-    max-width: 500px;
+    width: 90vw;
+    max-width: 1000px;
+  }
+  @include mobile {
+    width: 90vw;
   }
 
   &__popular-label {
@@ -66,27 +69,25 @@ body {
     z-index: 10;
 
     @include big-tablet {
-      width: 34vw;
-      height: 50px;
-      font-size: 20px;
-      top: 15px;
-      right: -80px;
+      width: 200px;
+      height: 30px;
+      font-size: 18px;
+      top: 40px;
+      right: -46px;
     }
 
     @include small-tablet {
-      width: 34vw;
-      height: 40px;
       font-size: 15px;
-      top: 10px;
-      right: -70px;
+      top: 30px;
+      right: -49px;
     }
 
     @include mobile {
       width: 120px;
       height: 25px;
       font-size: 10px;
-      top: 12px;
-      right: -45px;
+      top: 15px;
+      right: -32px;
     }
   }
 
@@ -135,17 +136,16 @@ body {
 
       @include big-tablet {
         font-size: 30px;
-        margin-bottom: 40px;
+        margin-top: 9px;
+        margin-bottom: 0;
       }
 
       @include small-tablet {
         font-size: 20px;
-        margin-bottom: 31px;
       }
 
       @include mobile {
         font-size: 18px;
-        margin-bottom: 18px;
       }
     }
   }
@@ -159,9 +159,14 @@ body {
     font-size: 55px;
     font-weight: $bold-weight;
 
+    @include big-tablet {
+      margin-top: 31px;
+    }
+
     @include mobile {
-      height: 70px;
-      font-size: 40px;
+      height: 60px;
+      font-size: 35px;
+      margin-top: 18px;
     }
 
     &_green {
@@ -238,7 +243,7 @@ body {
     }
 
     @include small-tablet {
-      font-size: 15px;
+      font-size: clamp(12px, 2.2vw, 18px);
       padding-left: 50px;
       width: 50%;
 
@@ -254,9 +259,10 @@ body {
     }
 
     @include mobile {
-      font-size: 12px;
       padding-left: 35px;
       height: 45px;
+      width: 100%;
+      line-height: normal;
     }
   }
 
@@ -269,8 +275,6 @@ body {
     background-size: contain;
 
     @include big-tablet {
-      width: 22px;
-      height: 20px;
       left: 25px;
     }
 
