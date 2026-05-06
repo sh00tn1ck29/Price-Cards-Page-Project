@@ -3,101 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Price cards page</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://bionic-university.s3.eu-central-1.amazonaws.com/projects/price-cards/checkmark-green.png"
-    />
+    <title>Price cards</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="img/verification-checkmark-symbol_green.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="Desktop">
-      <div class="price-cards-container">
-        <!-- Basic price card -->
-        <article class="price-card price-card--basic">
-          <div class="price-card__header">
-            <h2 class="price-card_title">Basic</h2>
-            <p class="price-card__subtitle">Website</p>
-          </div>
-          <div class="price-card__price-block">
-            <span class="price-card_price">99€</span>
-          </div>
-          <p class="price-card_description">
-            Simple website made in the world's most popular CMS system, Wordpress.
-          </p>
-          <ul class="price-card_options-list">
-            <li class="price-card__option">Website in WordPress</li>
-            <li class="price-card__option">3 sub pages</li>
-            <li class="price-card__option">Theme customized</li>
-            <li class="price-card__option">Help and guidance</li>
-            <li class="price-card__option">System introduction</li>
-            <li class="price-card__option">2 weeks free support</li>
-          </ul>
-          <button class="price-card_order-btn">ORDER NOW</button>
-        </article>
-
-        <!-- Business price card (with POPULAR ribbon) -->
-        <article class="price-card price-card--business price-card--popular">
-          <div class="price-card__ribbon">POPULAR</div>
-          <div class="price-card__header">
-            <h2 class="price-card_title">Business</h2>
-            <p class="price-card__subtitle">Website</p>
-          </div>
-          <div class="price-card__price-block">
-            <span class="price-card_price">299€</span>
-          </div>
-          <p class="price-card_description">
-            Advanced website made in the world's most popular CMS system, Wordpress.
-          </p>
-          <ul class="price-card_options-list">
-            <li class="price-card__option">Website in WordPress</li>
-            <li class="price-card__option">3-5 sub pages</li>
-            <li class="price-card__option">Theme customized</li>
-            <li class="price-card__option">Help and guidance</li>
-            <li class="price-card__option">System introduction</li>
-            <li class="price-card__option">1 month free support</li>
-          </ul>
-          <button class="price-card_order-btn">ORDER NOW</button>
-        </article>
-
-        <!-- Webshop price card -->
-        <article class="price-card price-card--webshop">
-          <div class="price-card__header">
-            <h2 class="price-card_title">Webshop</h2>
-            <p class="price-card__subtitle">Website</p>
-          </div>
-          <div class="price-card__price-block">
-            <span class="price-card_price">599€</span>
-          </div>
-          <p class="price-card_description">
-            Your own webshop made the world's most popular CMS system, Wordpress.
-          </p>
-          <ul class="price-card_options-list">
-            <li class="price-card__option">Webshop in WordPress</li>
-            <li class="price-card__option">3-5 sub pages</li>
-            <li class="price-card__option">Theme customized</li>
-            <li class="price-card__option">Help and guidance</li>
-            <li class="price-card__option">System introduction</li>
-            <li class="price-card__option">1 month free support</li>
-          </ul>
-          <button class="price-card_order-btn">ORDER NOW</button>
-        </article>
+    <section class="price-cards">
+      <div class="price-card">
+        <header class="price-card__title">
+          <h2>Basic</h2>
+          <span>Website</span>
+        </header>
+        <div class="price-card__price price-card__price_green">99€</div>
+        <p class="price-card__description">
+          Simple website made in the world's most popular CMS system, Wordpress.
+        </p>
+        <ul class="price-card__options-list">
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_green"></i>Website in WordPress
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_green"></i>3 sub pages
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_green"></i>Theme customized
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_green"></i>Help and guidance
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_green"></i>System introduction
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_green"></i>2 weeks free support
+          </li>
+        </ul>
+        <button class="price-card__order-btn price-card__order-btn_green">ORDER NOW</button>
       </div>
-      <div class="bg"></div>
-    </div>
+      <div class="price-card">
+        <span class="price-card__popular-label">POPULAR</span>
+        <header class="price-card__title">
+          <h2>Business</h2>
+          <span>Website</span>
+        </header>
+        <div class="price-card__price price-card__price_blue">299€</div>
+        <p class="price-card__description">
+          Advanced website made in the world's most popular CMS system, Wordpress.
+        </p>
+        <ul class="price-card__options-list">
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_blue"></i>Website in WordPress
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_blue"></i>3-5 sub pages
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_blue"></i>Theme customized
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_blue"></i>Help and guidance
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_blue"></i>System introduction
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_blue"></i>1 month free support
+          </li>
+        </ul>
+        <button class="price-card__order-btn price-card__order-btn_blue">ORDER NOW</button>
+      </div>
+      <div class="price-card">
+        <header class="price-card__title">
+          <h2>Webshop</h2>
+          <span>Website</span>
+        </header>
+        <div class="price-card__price price-card__price_orange">599€</div>
+        <p class="price-card__description">
+          Your own webshop made in the world's most popular CMS system, Wordpress.
+        </p>
+        <ul class="price-card__options-list">
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_orange"></i>Webshop in WordPress
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_orange"></i>3-5 sub pages
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_orange"></i>Theme customized
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_orange"></i>Help and guidance
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_orange"></i>System introduction
+          </li>
+          <li class="price-card__option">
+            <i class="price-card__checkmark price-card__checkmark_orange"></i>1 month free support
+          </li>
+        </ul>
+        <button class="price-card__order-btn price-card__order-btn_orange">ORDER NOW</button>
+      </div>
+    </section>
   </body>
 </html>
+
 
