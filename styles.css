@@ -80,6 +80,7 @@
 @media screen and (min-width: 1200px) {
   .price-card__title h2 {
     font-size: 35px;
+    line-height: 43px;
   }
 }
 .price-card__title span {
@@ -90,6 +91,7 @@
   .price-card__title span {
     font-size: 20px;
     margin-bottom: 31px;
+    line-height: 24px;
   }
 }
 .price-card__price {
@@ -105,6 +107,7 @@
   .price-card__price {
     height: 105px;
     font-size: 55px;
+    line-height: 105px;
   }
 }
 .price-card__price_green {
@@ -128,6 +131,8 @@
     width: 320px;
     font-size: 15px;
     margin: 40px auto;
+    line-height: 18px;
+    font-weight: 300;
   }
 }
 .price-card__options-list {
@@ -171,6 +176,9 @@
   .price-card__option {
     height: 50px;
     padding-left: 59px;
+    line-height: 50px;
+    font-size: 15px;
+    font-weight: 300;
   }
   .price-card__option:nth-child(even) {
     background-color: transparent;
@@ -247,8 +255,3 @@ body {
 }
 
 /*# sourceMappingURL=styles.css.map */
-
-
-
-/*# sourceMappingURL=styles.css.map */
-
