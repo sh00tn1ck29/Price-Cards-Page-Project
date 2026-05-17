@@ -1,6 +1,7 @@
-@import 'variables.scss';
-@import 'breakpoints.scss';
-@import 'cards.scss';
+@use 'variables' as *;
+@use 'breakpoints' as *;
+@use 'cards';
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +9,12 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: $light-weight;
-  background-color: $cite-bg-color;
-  color: $color-white;
-  font-size: 15px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: $cite-bg-color;
+  color: $color-white;
+  -webkit-font-smoothing: antialiased;
 }
