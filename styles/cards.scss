@@ -5,27 +5,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 25px;
-  padding: 40px 15px;
   width: 100%;
+  padding: 40px 15px;
+  row-gap: 25px;
 
   @include desktop {
     flex-direction: row;
     justify-content: center;
-    column-gap: 18px;
+    width: 1176px;
     padding: 0;
     margin: 65px auto;
-    width: 1176px;
+    column-gap: 18px;
   }
 }
 
 .price-card {
-  width: 100%;
-  max-width: 500px;
-  background-color: $card-bg-color;
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
+  max-width: 500px;
+  background-color: $card-bg-color;
   overflow: hidden;
 
   @include desktop {
@@ -34,29 +34,31 @@
   }
 
   &__popular-label {
+    position: absolute;
+    top: 15px;
+    right: -32px;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 120px;
     height: 25px;
     background-color: $red-ribbon-color;
-    transform: rotate(45deg);
     font-size: 10px;
     font-weight: $bold-weight;
-    position: absolute;
-    top: 15px;
-    right: -32px;
-    z-index: 10;
+    transform: rotate(45deg);
 
     @include tablet {
+      top: 15px;
+      right: -32px;
       width: 140px;
       font-size: 12px;
     }
 
     @include desktop {
-      width: 147px;
       top: 29px;
       right: -29px;
+      width: 147px;
       font-size: 14px;
     }
   }
@@ -75,6 +77,7 @@
       @include tablet {
         font-size: 32px;
       }
+
       @include desktop {
         font-size: 35px;
         line-height: 43px;
@@ -87,18 +90,18 @@
 
       @include desktop {
         font-size: 20px;
-        margin-bottom: 31px;
         line-height: 24px;
+        margin-bottom: 31px;
       }
     }
   }
 
   &__price {
-    width: 100%;
-    height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 65px;
     font-size: 38px;
     font-weight: $bold-weight;
 
@@ -121,24 +124,24 @@
 
   &__description {
     width: 85%;
-    margin: 20px auto;
     text-align: center;
     font-size: 14px;
     line-height: 1.5;
+    margin: 20px auto;
 
     @include desktop {
       width: 320px;
       font-size: 15px;
-      margin: 40px auto;
-      line-height: 18px;
       font-weight: $light-weight;
+      line-height: 18px;
+      margin: 40px auto;
     }
   }
 
   &__options-list {
-    list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    list-style: none;
 
     @include tablet {
       grid-template-columns: 1fr 1fr;
@@ -150,12 +153,13 @@
   }
 
   &__option {
-    height: 45px;
+    position: relative;
     display: flex;
     align-items: center;
-    padding-left: 40px;
+    width: 100%;
+    height: 45px;
     font-size: 14px;
-    position: relative;
+    padding-left: 40px;
 
     &:nth-child(odd) {
       background-color: transparent;
@@ -176,11 +180,13 @@
     }
 
     @include desktop {
+      display: flex;
+      width: 100%;
       height: 50px;
-      padding-left: 59px;
-      line-height: 50px;
       font-size: 15px;
       font-weight: $light-weight;
+      line-height: 50px;
+      padding-left: 59px;
 
       &:nth-child(even) {
         background-color: transparent;
@@ -206,9 +212,11 @@
     &_green {
       background-image: url('https://bionic-university.s3.eu-central-1.amazonaws.com/projects/price-cards/checkmark-green.png');
     }
+
     &_blue {
       background-image: url('https://bionic-university.s3.eu-central-1.amazonaws.com/projects/price-cards/checkmark-blue.png');
     }
+
     &_orange {
       background-image: url('https://bionic-university.s3.eu-central-1.amazonaws.com/projects/price-cards/checkmark-orange.png');
     }
@@ -217,26 +225,28 @@
   &__order-btn {
     width: 140px;
     height: 40px;
-    margin: 25px auto;
-    border-radius: 20px;
-    border: none;
     color: $color-white;
-    cursor: pointer;
-    font-family: inherit;
     font-size: 13px;
+    font-family: inherit;
+    border: none;
+    border-radius: 20px;
+    margin: 25px auto;
+    cursor: pointer;
 
     @include desktop {
       width: 156px;
-      margin: 40px auto;
       font-size: 15px;
+      margin: 40px auto;
     }
 
     &_green {
       background-color: $basic-price-bgcl;
     }
+
     &_blue {
       background-color: $business-price-bgcl;
     }
+
     &_orange {
       background-color: $webshop-price-bgcl;
     }
