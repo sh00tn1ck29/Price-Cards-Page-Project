@@ -10,7 +10,7 @@ Desktop: 1400px and above.
 Tablet: From 480px up to 1400px.
 
 Mobile: 320px to 480px.
-Built using a  Desktop-First approach with custom SASS mixins for breakpoint management.
+Built using a  Mobile-First approach with custom SASS mixins for breakpoint management.
 
 ### The tech stack is:
 
